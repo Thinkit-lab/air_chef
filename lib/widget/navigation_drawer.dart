@@ -1,4 +1,8 @@
 import 'package:air_chef/Screens/home.dart';
+import 'package:air_chef/Screens/home2.dart';
+import 'package:air_chef/Screens/my_favourites.dart';
+import 'package:air_chef/Screens/order_history.dart';
+import 'package:air_chef/Screens/orders.dart';
 import 'package:air_chef/Screens/profile2.dart';
 import 'package:flutter/material.dart';
 
@@ -53,43 +57,43 @@ class NavigationDrawerWidget extends StatelessWidget {
                   buildMenuItem(
                     text: 'Account',
                     icon: Icons.person,
-                    onClicked: () => selectedItem(context, 0),
+                    onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'My orders',
                     icon: Icons.shop,
-                    onClicked: () => selectedItem(context, 1),
+                    onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Favourites',
                     icon: Icons.favorite,
-                    onClicked: () => selectedItem(context, 2),
+                    onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'History',
                     icon: Icons.history,
-                    onClicked: () => selectedItem(context, 3),
+                    onClicked: () => selectedItem(context, 4),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Rate us',
                     icon: Icons.rate_review,
-                    onClicked: () => selectedItem(context, 4),
+                    onClicked: () => selectedItem(context, 5),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'About us',
                     icon: Icons.forward,
-                    onClicked: () => selectedItem(context, 5),
+                    onClicked: () => selectedItem(context, 6),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Language',
                     icon: Icons.language,
-                    onClicked: () => selectedItem(context, 5),
+                    onClicked: () => selectedItem(context, 7),
                   ),
                   const SizedBox(height: 40),
                   Row(
@@ -179,6 +183,36 @@ class NavigationDrawerWidget extends StatelessWidget {
         ));
         break;
       case 1:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => Profile2Page(),
+        ));
+        break;
+        case 2:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => Orders(),
+        ));
+        break;
+        case 3:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => MyFavourites(),
+        ));
+        break;
+        case 4:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => OrderHistory(),
+        ));
+        break;
+        case 5:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => HomePage2(),
+        ));
+        break;
+        case 6:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => Profile2Page(),
+        ));
+        break;
+        case 7:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Profile2Page(),
         ));
